@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "type": "software",
+  "label": "software project",
+  "title": "Write a full textbook for a DevOps/cloud engineer undergraduate senior level student preparing for...",
+  "purpose": "Write a full textbook for a DevOps/cloud engineer undergraduate senior level student preparing for graduate level and professional software work.",
+  "createdAt": "2026-10-19T17:49:31.879Z",
+  "finalProduct": null,
+  "note": "The colony works until every requirement below holds, then raises the bar and keeps going (see \"level\"): set \"expand\": false to let it finish, or \"maxLevel\" to change how far it goes. Edit a threshold, add or remove a requirement, and the colony follows the new definition on its next round.",
+  "level": 0,
+  "checks": [
+    {
+      "id": "readme",
+      "label": "README",
+      "kind": "headings",
+      "path": "README.md",
+      "minWords": 80,
+      "headings": [
+        {
+          "re": "overview|about|introduction|what it does",
+          "label": "Overview"
+        },
+        {
+          "re": "install|setup|set up|getting started|requirements",
+          "label": "Install"
+        },
+        {
+          "re": "usage|how to use|running|quick ?start",
+          "label": "Usage"
+        }
+      ],
+      "tags": [
+        "writing",
+        "docs",
+        "documentation"
+      ],
+      "fix": "Rewrite README.md for this software: a title, then sections named Overview (what it does), Install (how to set it up and run it) and Usage (concrete commands or steps). At least 80 words. Send it as one repo-file block."
+    },
+    {
+      "id": "source",
+      "label": "Working source code",
+      "kind": "dirChars",
+      "dir": "src",
+      "ext": [
+        ".js",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx",
+        ".jsx",
+        ".py",
+        ".go",
+        ".rs",
+        ".java",
+        ".kt",
+        ".cs",
+        ".c",
+        ".cpp",
+        ".h",
+        ".rb",
+        ".php",
+        ".sh",
+        ".ps1",
+        ".lua",
+        ".swift",
+        ".html",
+        ".css"
+      ],
+      "minChars": 1500,
+      "tags": [
+        "code",
+        "implementation",
+        "build",
+        "engineering"
+      ],
+      "fix": "Write the program's real source under src/ (at least ~1500 characters of working code, in the language the purpose implies). One cohesive file per repo-file block, complete and runnable - no stubs, no \"...\" and no pseudo-code."
+    },
+    {
+      "id": "tests",
+      "label": "Tests",
+      "kind": "dirFiles",
+      "dir": "tests",
+      "ext": [
+        ".js",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx",
+        ".jsx",
+        ".py",
+        ".go",
+        ".rs",
+        ".java",
+        ".kt",
+        ".cs",
+        ".c",
+        ".cpp",
+        ".h",
+        ".rb",
+        ".php",
+        ".sh",
+        ".ps1",
+        ".lua",
+        ".swift",
+        ".html",
+        ".css"
+      ],
+      "min": 1,
+      "minWords": 20,
+      "tags": [
+        "code",
+        "testing",
+        "verification",
+        "quality"
+      ],
+      "fix": "Write at least one test file under tests/ that exercises the code in src/ with concrete inputs and expected outputs (a file named like test_*.py, *.test.js or similar)."
+    },
+    {
+      "id": "design",
+      "label": "Design notes",
+      "kind": "file",
+      "path": "docs/design.md",
+      "minWords": 120,
+      "tags": [
+        "docs",
+        "design",
+        "architecture",
+        "writing"
+      ],
+      "fix": "Write docs/design.md: how the program is structured (modules and what each does), the main data flow, key decisions and known limits. At least 120 words."
+    },
+    {
+      "id": "syntax",
+      "label": "Code parses",
+      "kind": "syntax",
+      "tags": [
+        "code",
+        "quality",
+        "debugging"
+      ],
+      "fix": "Fix the syntax error named in the problem with a repo-edit block on that file."
+    },
+    {
+      "id": "no-placeholders",
+      "label": "No placeholder text",
+      "kind": "noPlaceholders",
+      "paths": [
+        "src",
+        "tests",
+        "docs",
+        "README.md"
+      ],
+      "tags": [
+        "review",
+        "editing"
+      ],
+      "allowTodo": true,
+      "fix": "Replace every TODO / TBD / placeholder / \"[insert ...]\" / \"(rest unchanged)\" marker with the real content, using repo-edit on the file named in the problem."
+    }
+  ]
+}
