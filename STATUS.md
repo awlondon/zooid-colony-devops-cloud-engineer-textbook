@@ -1,11 +1,11 @@
 # Status - Write a full textbook for a DevOps/cloud engineer undergraduate senior level student preparing for...
 
 Product: **software project** · requirements met: **6 of 7**
-Updated 2026-10-19T23:30:20.592Z (colony round 44). This file is written by the colony; edit PROJECT.json to change what "done" means.
+Updated 2026-10-20T00:04:35.154Z (colony round 47). This file is written by the colony; edit PROJECT.json to change what "done" means.
 
 | | Requirement | State | Assigned to |
 |---|---|---|---|
-|   | README | README.md has no section for: Overview, Install, Usage. | Repository Editor (fork) (fork) |
+|   | README | README.md has no section for: Overview, Install, Usage. | Repository Editor (fork) |
 | x | Working source code | done | - |
 | x | Tests | done | - |
 | x | Design notes | done | - |
